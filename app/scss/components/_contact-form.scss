@@ -1,0 +1,64 @@
+.contact-form {
+    width: 45rem;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 3rem 3rem 4rem $color-white-dark;
+    transform: rotateY(-20deg);
+    transition: all .5s;
+
+    @include respond(tab-land) {
+        transform: translate(0);
+    }
+
+    @include respond(phone-small) {
+        box-shadow: 1rem 1rem 2rem $color-white-dark;
+    }
+    
+    &:hover {
+        transform: translateY(-2rem) rotateY(-20deg);
+        box-shadow: 5rem 5rem 7rem $color-white-dark;
+
+        @include respond(tab-land) {
+            transform: translateY(-1rem);
+        }
+
+        @include respond(phone-small) {
+            box-shadow: 2rem 2rem 3rem $color-white-dark;
+        }
+    }
+
+    input,
+    textarea {
+        margin: 1rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+        letter-spacing: .1rem;
+        border: none;
+        border-radius: 2rem;
+        box-shadow: inset .1rem .1rem .2rem $color-grey-light,
+                    inset -.1rem -.1rem .2rem $color-grey-light;
+    }
+
+    textarea {
+        max-height: 15rem;
+        min-height: 10rem;
+        max-width: 100%;
+        min-width: 70%;
+    }
+
+    input[type="submit"] {
+        background-color: $color-floating-bg-clear;
+        color: $color-white;
+        font-weight: bolder;
+        letter-spacing: .5rem;
+        cursor: pointer;
+        transition: background-color .5s;
+
+        &:hover {
+            background-color: $color-aqua;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.customer {
+    width: 35rem;
+    height: 50rem;
+    background-color: $color-customer-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 2rem $color-grey-light,
+                -1rem -1rem 2rem $color-customer-bg;
+    transition: box-shadow .5s;
+
+    @include respond(tab-land) {
+        margin: 5rem 10rem;
+    }
+
+    @include respond(phone-small) {
+        margin: 5rem 0;
+    }
+    
+    &:hover {
+        box-shadow: 2rem 2rem 3rem $color-grey-light,
+                -2rem -2rem 3rem $color-customer-bg;
+    }
+    
+    &:first-child {
+        align-self: flex-end;
+    }
+
+    &:last-child {
+        align-self: flex-start;
+    }
+
+    &__img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        margin: 2rem 0;
+        border-radius: 50%;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        margin: 2.5rem 0;
+        text-align: justify;
+
+        &::first-letter {
+            margin-left: 1rem;
+        }
+    }
+
+    &__rating i {
+        font-size: 2rem;
+        color: $color-gamboge;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.fa-quote-left {
+    font-size: 4rem;
+    color: $color-gamboge;
+}
